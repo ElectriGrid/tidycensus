@@ -145,4 +145,4 @@ pop_census_tidy <- clean_census |>
 write_csv(pop_census_tidy, file = here::here("census-data", "pop_census_tidy.csv"))  
 ```
 
-
+# The clean data steps should be re-run once the variables list has been narrowed down
