@@ -235,19 +235,53 @@ var_codes_poverty <- tribble(
 
 Create loop to run over variable code data frames. Each loop accesses and saves the corresponding census data into the environment:
 ```{r}
-for (i in 1:nrow(var_codes_home_owner)){
-  
-  variable <- var_codes_home_owner$description[i]
-  code <- var_codes_home_owner$code[i]
-  
-  df <- get_acs(geography = "tract", 
-                        variables = code,
-                        geometry = TRUE,
-                        state = "CA", 
-                        year = 2020)
-  
-  assign(variable, df)
-}
+# for (i in 1:nrow(var_codes_home_owner)){
+#   
+#   variable <- var_codes_home_owner$description[i]
+#   code <- var_codes_home_owner$code[i]
+#   
+#   df <- get_acs(geography = "tract", 
+#                         variables = code,
+#                         geometry = TRUE,
+#                         state = "CA", 
+#                         year = 2020)
+#   
+#   assign(variable, df)
+# }
 ```
 
 This loop can be applied to all data frames created before.
+
+The loop is just outputting one of variables' values but we need all of them. We can just make a list of the variables and get the estimates for all of them in one call. This will make it easier to get a tidy data frame of the variables and the estimates we need.
+
+```{r}
+socioeconomic_var <- c("B25003_001", 
+                       "B25003_002", 
+                       "B25003_003", 
+                       "B25003H_003", 
+                       "B25026_001", 
+                       "B25026_009", 
+                       "B25127_001",
+                       "B11011_004",
+                       "B11011_002",
+                       "B16010_041", 
+                       "B16010_001",
+                       "B25077_001", 
+                       "B25097_001",
+                       "B25107_001",  
+                       "B19113_001",
+                       "B19013_001", 
+                       "B19013A_001", 
+                       "B19013B_001", 
+)
+```
+
+
+```{r}
+tidy_df <- df |>
+  select(GEOID, NAME, variable, estimate, geometry) |> 
+ pivot_wider(names_from = variable, values_from = c(estimate)) 
+
+#........................write data to csv.......................
+#write_csv(pop_census_tidy, file = here::here("census-data", "pop_census_tidy.csv"))  
+```
