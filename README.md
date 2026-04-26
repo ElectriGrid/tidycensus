@@ -6,13 +6,14 @@ The capstone client provided a list of the ACS data of most interest and was the
 
 ## Repository Structure
 
-<img width="336" height="133" alt="Screenshot 2026-04-26 at 11 44 11 AM" src="https://github.com/user-attachments/assets/018cd93e-2946-4a9d-9f3d-4337960ace32" />
+<img width="336" height="133" alt="Screenshot 2026-04-26 at 11 48 17 AM" src="https://github.com/user-attachments/assets/85853e17-9fab-44f5-9990-23d903312760" />
+
 
 ### Repository Contents
 
 - **Census data:** Downloaded census data in csv format.
-- **Exploration:** Initial investigation of the tidycensus tool
-- **
+- **Exploration:** Initial investigation of the tidycensus tool.
+- **Tidycensus.qmd:** Code to download the data using the tidycensus package.
 
 
 
