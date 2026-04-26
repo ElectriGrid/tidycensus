@@ -6,6 +6,16 @@ The capstone client provided a list of the ACS data of most interest and was the
 
 ## Repository Structure
 
+├── census-data
+│   ├── census_data.csv
+│   ├── pop_census_tidy.csv
+│   └── var20.csv
+├── exploration.qmd
+├── README.md
+├── tidycensus.qmd
+├── tidycensus.rmarkdown
+└── tidycensus.Rproj
+
 
 
 
