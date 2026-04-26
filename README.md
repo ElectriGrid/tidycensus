@@ -1,4 +1,4 @@
-# Tidycensus 
+# Tidycensus: Acessing Sociodemographic Data
 
 This repository stores code to download census data from the tidycensus package. American Community Survey (ACS) data was downloaded and is utilized to calculate any correlation with sociodemographic characteristics and limited energy availability in the form of Distributed Energy Resources. 
 
@@ -6,16 +6,13 @@ The capstone client provided a list of the ACS data of most interest and was the
 
 ## Repository Structure
 
-├── census-data
-│   ├── census_data.csv
-│   ├── pop_census_tidy.csv
-│   └── var20.csv
-├── exploration.qmd
-├── README.md
-├── tidycensus.qmd
-├── tidycensus.rmarkdown
-└── tidycensus.Rproj
+<img width="336" height="133" alt="Screenshot 2026-04-26 at 11 44 11 AM" src="https://github.com/user-attachments/assets/018cd93e-2946-4a9d-9f3d-4337960ace32" />
 
+### Repository Contents
+
+- **Census data:** Downloaded census data in csv format.
+- **Exploration:** Initial investigation of the tidycensus tool
+- **
 
 
 
